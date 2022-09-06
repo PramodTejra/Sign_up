@@ -1,0 +1,134 @@
+/* sign up css */
+
+body {
+    height: 834px;
+    width: 800px;
+    background: radial-gradient(circle at 50%, #888b8c 30%, #505151 55%, #000000 100%);
+    /* background: radial-gradient(circle at 50%, #e4aae0 30%, #935796 55%, #430241 100%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* center circle */
+
+.container {
+    height: 500px;
+    width: 500px;
+    background: radial-gradient(circle at 50%, #ffffff 32%, #313132 62%, #000000 72%);
+    /* background: radial-gradient(circle at 50%, #ffffff 32%, #c77cc7 62%, #a71a92 72%); */
+    opacity: 0.7;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 10px 30px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 20px white;
+    transform: translate(-50%, -100%) scale(0.5, 0.5) perspective(700px) rotateX(80deg) translateZ(-100px);
+    animation: animate 2s forwards;
+    transition: all 2s;
+}
+
+@keyframes animate {
+    100% {
+        transform: translate(-50%, -50%) scale(1, 1) rotateX(0deg);
+    }
+}
+
+/* side two circle */
+
+.minicontainer {
+    height: 200px;
+    width: 200px;
+    background: radial-gradient(circle at 50%, #ffffff 32%, #313132 62%, #000000 72%);
+    /* background: radial-gradient(circle at 50%, #bbe1fa 32%, #3282b8 62%, #000000 72%); */
+    /* background: radial-gradient(circle at 50%, #fabbe2 32%, #b832ab 62%, #8c2061 72%); */
+    opacity: 0.5;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 10px 30px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 20px white;
+}
+
+#top-left {
+    transform: translate(-160%, -100%);
+    animation: animate-top-bottom 2s;
+}
+
+#bottom-right {
+    transform: translate(50%, 20%);
+    animation: animate-top-bottom 2s;
+}
+
+@keyframes animate-top-bottom {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.innercontainer {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.sign-title {
+    font-size: 2.0em;
+    text-transform: uppercase;
+    color: black;
+}
+
+.innercontainer input {
+    line-height: center;
+    margin: 0.7em 0;
+    padding: 0.9em;
+    width: calc(350px - 40px);
+    border-radius: 25px;
+    border: 1px solid #300327;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+::placeholder {
+    color: black;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+}
+
+button {
+    line-height: center;
+    letter-spacing: 0.6em;
+    margin: 0.7em 0;
+    padding: 0.9em;
+    width: calc(250px - 40px);
+    border-radius: 25px;
+    border: 1px solid #000000;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    background: #403f40;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+button:hover {
+    background: #201f20;
+    border: 1px solid white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-size: 30px;
+}
+
+a:hover {
+    color: white;
+}
